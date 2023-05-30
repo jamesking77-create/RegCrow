@@ -1,7 +1,6 @@
 package data.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,21 +10,18 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
-public class User {
+public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @OneToOne
-    private BioData bioData;
+    private Payment payment;
 
-    private String firstname;
+    private Long sellerId;
 
-    private String  lastname;
-
-    private String profileImage;
+    private Long buyerId;
 
     private LocalDateTime createdAt;
 

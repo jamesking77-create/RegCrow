@@ -1,25 +1,38 @@
 package data.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Objects;
+import java.util.UUID;
 
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 public class BioData {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String email;
+
     private  String password;
 
+
+
+
+
+    // TODO: 5/30/2023 review the UUID methods to generate unique id...
+//    public static void main(String[] args) {
+//        UUID uuid = UUID.randomUUID();
+//        System.out.println(uuid);
+//        UUID uuid2 = UUID.nameUUIDFromBytes("abcdefg...".getBytes());
+//        System.out.println(uuid2);
+//    }
 
     // TODO: 5/30/2023 review the overridden difference between equals and hashcode below..
 
