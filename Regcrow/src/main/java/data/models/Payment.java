@@ -24,4 +24,5 @@ public class Payment {
     private LocalDateTime createdAt;
     private PaymentMethod paymentMethod;
     private  String  reference;
+    private Status status;
 }

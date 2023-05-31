@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.resource.transaction.spi.TransactionStatus;
 
 import java.time.LocalDateTime;
 
@@ -24,5 +25,5 @@ public class Transaction {
     private Long buyerId;
 
     private LocalDateTime createdAt;
-
+    private TransactionStatus status;
 }
