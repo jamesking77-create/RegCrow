@@ -18,7 +18,7 @@ public class RegcrowCustomerServiceTest {
 
     @Test public void testThatCustomerCanRegister() throws CustomerRegistrationFailedException {
         CustomerRegistrationRequest customerRegistrationRequest = new CustomerRegistrationRequest();
-        customerRegistrationRequest.setEmail("tinubu@email.com");
+        customerRegistrationRequest.setEmail("tinu@email.com");
         customerRegistrationRequest.setPassword("");
 
        CustomerRegistrationResponse registrationResponse = customerService.register(customerRegistrationRequest);

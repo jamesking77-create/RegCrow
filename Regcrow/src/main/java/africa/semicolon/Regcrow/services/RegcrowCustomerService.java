@@ -11,6 +11,9 @@ import africa.semicolon.Regcrow.dtos.Response.CustomerRegistrationResponse;
 import africa.semicolon.Regcrow.exceptions.CustomerRegistrationFailedException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+
 @Service
 @AllArgsConstructor
 public class RegcrowCustomerService implements CustomerService {
@@ -37,11 +40,9 @@ public class RegcrowCustomerService implements CustomerService {
                 .password(customerPassword)
                 .build();
 
-
-
-
         Customer customer = new Customer();
         customer.setBioData(bioData);
+        customer.setTimeCreated(LocalDateTime.now());
         Customer savedCustomer = customerRepository.save(customer);
         boolean isNotSavedCustomer = savedCustomer.getId() != null;
         if (!isNotSavedCustomer) throw new CustomerRegistrationFailedException(

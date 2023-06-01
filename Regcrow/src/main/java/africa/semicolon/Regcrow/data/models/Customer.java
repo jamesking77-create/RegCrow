@@ -29,5 +29,10 @@ public class Customer {
 
     private String profileImage;
 
-    private LocalDateTime createdAt;
+    private LocalDateTime timeCreated;
+
+    @PrePersist
+    public void setTimeCreated() {
+        this.timeCreated = LocalDateTime.now();
+    }
 }

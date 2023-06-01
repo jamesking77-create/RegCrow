@@ -25,6 +25,6 @@ public class User {
 
     private String profileImage;
 
-    private LocalDateTime createdAt;
+    private LocalDateTime timeCreated;
 
 }

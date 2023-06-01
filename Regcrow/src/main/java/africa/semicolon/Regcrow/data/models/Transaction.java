@@ -24,7 +24,7 @@ public class Transaction {
 
     private Long buyerId;
 
-    private LocalDateTime createdAt;
+    private LocalDateTime timeCreated;
 
     private TransactionStatus status;
 }

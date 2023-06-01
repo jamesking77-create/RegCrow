@@ -20,7 +20,7 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private BigDecimal amount;
-    private LocalDateTime createdAt;
+    private LocalDateTime timeCreated;
     private PaymentMethod paymentMethod;
     private  String  reference;
     private Status status;
