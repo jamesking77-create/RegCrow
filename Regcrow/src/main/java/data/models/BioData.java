@@ -12,6 +12,8 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 public class BioData {
     @Id
@@ -27,6 +29,7 @@ public class BioData {
 
 
     // TODO: 5/30/2023 review the UUID methods to generate unique id...
+
 //    public static void main(String[] args) {
 //        UUID uuid = UUID.randomUUID();
 //        System.out.println(uuid);

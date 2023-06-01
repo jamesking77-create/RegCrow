@@ -6,22 +6,22 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 @Entity
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Payment {
+public class BankAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private BigDecimal amount;
-    private LocalDateTime createdAt;
-    private PaymentMethod paymentMethod;
-    private  String  reference;
-    private Status status;
+
+    private String accountName;
+
+    private String accountNumber;
+
+    private String bankName;
+
 }

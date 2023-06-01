@@ -5,13 +5,14 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
-public class User {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -23,8 +24,10 @@ public class User {
 
     private String  lastname;
 
+    @OneToOne
+    private BankAccount bankAccount;
+
     private String profileImage;
 
     private LocalDateTime createdAt;
-
 }

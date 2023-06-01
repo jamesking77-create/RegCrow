@@ -1,9 +1,7 @@
 package data.models;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.resource.transaction.spi.TransactionStatus;
 
 import java.time.LocalDateTime;
@@ -11,6 +9,8 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 public class Transaction {
     @Id
@@ -25,5 +25,6 @@ public class Transaction {
     private Long buyerId;
 
     private LocalDateTime createdAt;
+
     private TransactionStatus status;
 }
