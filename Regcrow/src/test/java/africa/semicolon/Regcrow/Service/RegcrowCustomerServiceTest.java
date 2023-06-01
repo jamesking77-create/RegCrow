@@ -1,18 +1,18 @@
 package africa.semicolon.Regcrow.Service;
 
-import dtos.Requests.CustomerRegistrationRequest;
-import dtos.Response.CustomerRegistrationResponse;
-import exceptions.CustomerRegistrationFailedException;
+import africa.semicolon.Regcrow.dtos.Requests.CustomerRegistrationRequest;
+import africa.semicolon.Regcrow.dtos.Response.CustomerRegistrationResponse;
+import africa.semicolon.Regcrow.exceptions.CustomerRegistrationFailedException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import services.CustomerService;
+import africa.semicolon.Regcrow.services.CustomerService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 public class RegcrowCustomerServiceTest {
-
+    @Autowired
     private CustomerService customerService;
 
 
